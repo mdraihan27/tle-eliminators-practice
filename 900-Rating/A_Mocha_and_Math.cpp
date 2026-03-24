@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main()
+{
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -9,7 +10,8 @@ int main() {
     string s, t;
     cin >> tc;
 
-    for (long long i = 0; i < tc; i++) {
+    for (long long i = 0; i < tc; i++)
+    {
         count = 0;
         sum = 0;
         string x = "1111111111111111111111111111111111111111111111111111111111111111";
@@ -17,24 +19,37 @@ int main() {
         long long n;
         cin >> n;
 
-
         vector<long long> v(n);
-        for (long long j = 0; j < n; j++) {
-            cin >> v[j];
+        for (long long j = 0; j < n; j++)
+        {
+            cin >> a;
+            bitset<64> b(a);
+            s= b.to_string();
+
+            for(long long k = 0; k < 64; k++)
+            {
+                if (s[k]=='1' && x[k]=='1')
+                {
+                   
+                }else{
+                    x[k] = '0';
+                }
+            }
         }
 
-        
+        long long num = stoll(x, nullptr, 2);
 
-        
+        cout << num << endl;
     }
 
     // long long x = 10;
     // bitset<64> b(x);
     // cout << b.to_string();  // 64-bit binary string
 
-    for(int i=0;i<64;i++){
-        cout<<1;
-    }
+    // for (int i = 0; i < 64; i++)
+    // {
+    //     cout << 1;
+    // }
 
     return 0;
 }
